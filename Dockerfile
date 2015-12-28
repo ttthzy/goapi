@@ -38,8 +38,8 @@ ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
 ENV ROOT_PASS tenxcloud
 
 RUN go get github.com/tools/godep
-RUN mkdir /gopath/src/k8s.io
-WORKDIR /gopath/src/k8s.io
+RUN mkdir /gopath/src/goapi
+WORKDIR /gopath/src/goapi
 
 RUN ln -s /code/goapi
 
