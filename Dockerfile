@@ -41,6 +41,6 @@ RUN go get github.com/tools/godep
 RUN mkdir /gopath/src/k8s.io
 WORKDIR /gopath/src/k8s.io
 
-RUN ln -s /code/kubernetes
+RUN ln -s /code/goapi
 
 EXPOSE 22
