@@ -43,4 +43,6 @@ WORKDIR /gopath/src/goapi
 
 # RUN ln -s /code/goapi
 
-EXPOSE 22
+CMD ["go run main.go"]
+
+EXPOSE 22 8080
