@@ -38,6 +38,7 @@ ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
 ENV ROOT_PASS secondlife
 
 RUN go get github.com/tools/godep
+RUN go get github.com/go-martini/martini
 RUN mkdir /gopath/src/goapi
 WORKDIR /gopath/src/goapi
 
