@@ -35,12 +35,12 @@ ENV GOVERSION 1.5.1
 ENV GOROOT /usr/local/go
 ENV GOPATH /gopath
 ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
-ENV ROOT_PASS tenxcloud
+ENV ROOT_PASS secondlife
 
 RUN go get github.com/tools/godep
 RUN mkdir /gopath/src/goapi
 WORKDIR /gopath/src/goapi
 
-RUN ln -s /code/goapi
+# RUN ln -s /code/goapi
 
 EXPOSE 22
