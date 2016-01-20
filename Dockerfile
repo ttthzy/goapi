@@ -42,8 +42,6 @@ RUN go get github.com/go-martini/martini
 RUN mkdir /gopath/src/goapi
 WORKDIR /gopath/src/goapi
 
-# RUN ln -s /code/goapi
+RUN ln -s /code/goapi
 
-CMD ["go run main.go"]
-
-EXPOSE 22 8080
+EXPOSE 22 8080 80
