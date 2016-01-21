@@ -29,8 +29,9 @@ echo 'export GOROOT=/usr/local/go' >> /root/.bash_profile
 RUN echo 'ClientAliveInterval 120' >> /etc/ssh/sshd_config && \
 echo 'ClientAliveCountMax 3' >> /etc/ssh/sshd_config
 
-
 VOLUME /code
+RUN ln -s /code/gopath /
+
 ENV GOVERSION 1.5.1
 ENV GOROOT /usr/local/go
 ENV GOPATH /gopath
@@ -38,10 +39,9 @@ ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
 ENV ROOT_PASS secondlife
 
 RUN go get github.com/tools/godep
-RUN go get github.com/go-martini/martini
-RUN mkdir /gopath/src/
-WORKDIR /gopath/src/
+#RUN go get github.com/go-martini/martini
+#RUN go get github.com/pquerna/ffjson/ffjson
 
-RUN ln -s /code /gopath
+WORKDIR /gopath/src/
 
 EXPOSE 22
