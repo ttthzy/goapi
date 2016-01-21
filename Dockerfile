@@ -39,9 +39,9 @@ ENV ROOT_PASS secondlife
 
 RUN go get github.com/tools/godep
 RUN go get github.com/go-martini/martini
-RUN mkdir /gopath/src/goapi
-WORKDIR /gopath/src/goapi
+RUN mkdir /gopath/src/
+WORKDIR /gopath/src/
 
-RUN ln -s /code/goapi
+RUN ln -s /code /gopath
 
-EXPOSE 22 8080 80
+EXPOSE 22
